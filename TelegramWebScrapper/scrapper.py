@@ -23,9 +23,5 @@ class TelegramgWebScrapper:
         views = soup.find(class_="tgme_widget_message_views")
         return views.text
 
-
-scrapper = TelegramgWebScrapper("kunuzofficial")
-print(scrapper.get_post_views(125087))
-
     
         
