@@ -16,7 +16,6 @@ class TelegramgWebScrapper:
 
 
     def get_post_views(self, message_id: int) -> str:
-        """It function will recieve message_id as a post id"""
         soup = self.soup.find(class_="tgme_widget_message js-widget_message", attrs={"data-post": "%s/%s" % (self.channel, str(message_id))})
         if soup is None:
             raise self.__BS4.FeatureNotFound("Make sure that you have correct message id")
